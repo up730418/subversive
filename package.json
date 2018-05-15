@@ -1,0 +1,19 @@
+{
+  "name": "subversive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "lame": "^1.2.4",
+    "python-shell": "^0.5.0",
+    "raspberry-pi-mjpeg-server": "^1.0.1",
+    "speaker": "^0.4.1"
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype>
+<header>
+	<title>IBM Subversive</title>
+</header>
+
+
+<h4> Welcome to Pi cam spying on you since 2018 </h4>
+
+<img src="http://192.168.5.1:8300/image.jpg">
+<input type="button" id="servoAnti" value="Servo Anticlockwise"/>
+<input type="button" id="servoClock" value="Servo Clockwise"/>
+<input type="button" id="speaker" value="Speaker"/>
+
+<style>
+img {
+  
+  height: 80vh;      
+}
+</style>
+
+<script>
+function serverCommand(command) {
+  fetch('http://192.168.5.1:8080/' + command)
+}
+
+speaker.addEventListener('click', ()=> {
+  serverCommand("speak");
+})
+servoClock.addEventListener('click', ()=> {
+  serverCommand("servoClock");
+})
+servoAnti.addEventListener('click', ()=> {
+  serverCommand("servoAntiClock");
+})
+</script>
