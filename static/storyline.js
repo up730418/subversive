@@ -1,5 +1,5 @@
 function serverCommand(command) {
-  fetch('http://192.168.5.1:8080/' + command)
+  fetch('http://' + window.location.hostname + ':8080/' + command)
 }
 
 window.addEventListener('load', () => {
@@ -13,4 +13,5 @@ window.addEventListener('load', () => {
 //  servoAnti.addEventListener('click', ()=> {
 //    serverCommand("servoAntiClock");
 //  })
+  liveCamera.src = 'http://' + window.location.hostname + ':8300/image.jpg'
 })
