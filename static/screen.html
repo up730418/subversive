@@ -1,0 +1,29 @@
+<html> 
+  <section id="advert"  >
+    <h1> Buy Tothpaste today!!</h1>
+    <p>We sell all the best totthpaste so pop on down to toothpaste 
+      direct for a free sample now!!
+    </p>
+  </section>
+  
+  <section id="hack" hidden>
+    <h1>You will all die</h1>
+    <p>Don't panic if your insured your still going to die. MOHAHAHAH </p>
+  </section>
+</html>
+
+<script>
+  const ws = new WebSocket('ws://192.168.5.1:3434/',"screen");
+  const advertSection = document.getElementById('advert')
+  const hackSection = document.getElementById('hack')
+  ws.addEventListener('connection', function open() {
+              console.log("woop");
+          });
+
+
+  ws.addEventListener('message', function(message) { 
+    console.log(message)
+    advert.hidden == true ? advert.hidden = false : advert.hidden = true
+    hack.hidden == true ? hack.hidden = false : hack.hidden = true
+  })
+</script>

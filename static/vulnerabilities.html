@@ -11,6 +11,7 @@
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="assets/css/custom.css" rel="stylesheet">
+        <script src="storyline.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -133,7 +134,7 @@ The Eastland Mall is a urban hub of activity on bank holidays. Shopping, leisure
                             <h3 class="display-5">Elevator</h3>
            <p class="btn-attack display-5">OFF/ON</p>
 <!-- Rounded switch -->
-<label class="switch">
+<label class="switch" id="elevatorOn">
   <input onclick="elevator()" id="elevator" type="checkbox">
   <span class="slider round"></span>
 </label>
@@ -172,7 +173,7 @@ The Eastland Mall is a urban hub of activity on bank holidays. Shopping, leisure
                             <h3 class="display-5">Fire Alarms</h3>
            <p class="btn-attack display-5">OFF/ON</p>
 <!-- Rounded switch -->
-<label class="switch">
+<label class="switch" id="turnOnAlarm">
   <input onclick="alarms()" id="alarms" type="checkbox">
   <span class="slider round"></span>
 </label>
