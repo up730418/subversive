@@ -3,18 +3,18 @@
     <title>Toothpaste Advert</title>
     <link rel="stylesheet" type="text/css" href="screen.css"/>
   </head>
-  <h1 id="title">TOOTHPASTE DIRECT</h1>
-  <h3 id="buy">BUY TOOTHPASTE TODAY!</h3>
   <section id="advert">
+    <h1 id="title">TOOTHPASTE DIRECT</h1>
+    <h3 id="buy">BUY TOOTHPASTE TODAY!</h3>
     <p>We sell all the best toothpaste so pop on down to toothpaste
       direct for a free sample now!
     </p>
     <img id="tube" src="toothpaste.png" alt="A tube of toothpaste."/>
 
   </section>
-  <img id="pound" src="pound.png" alt="Only £1!"/>
-  <h1 id="die" hidden>You will all die</h1>
   <section id="hack" hidden>
+    <img id="pound" src="pound.png" alt="Only £1!"/>
+    <h1 id="die" hidden>You will all die</h1>
     <p>Don't panic if your insured your still going to die. MOHAHAHAH </p>
   </section>
 </html>
@@ -30,11 +30,7 @@
               console.log("woop");
           });
   ws.addEventListener('message', function(message) {
-    console.log(message)
-    title.hidden == true ? title.hidden = false : title.hidden = true
-    buy.hidden == true ? buy.hidden = false : buy.hidden = true
     advert.hidden == true ? advert.hidden = false : advert.hidden = true
-    die.hidden == true ? die.hidden = false : die.hidden = true
     hack.hidden == true ? hack.hidden = false : hack.hidden = true
   })
 </script>
