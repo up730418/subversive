@@ -19,9 +19,13 @@ To enable the screen clone this repo and follow the instructions in the README.m
 
 To launch the browser on startup we need to edit the a startup file `nano /home/pi/.config/lxsession/LXDE-pi/autostart`.
 Once in the file scroll to the bottom and on a new line insert the following lines of code 
+
 `@xset s off
+
 @xset -dpms
+
 @xset s noblank
+
 @chromium-browser --kiosk http://192.168.5.1:8080/screen.html `
 
 The pi show the advert when it boots. Note that sometimes it takes a while before the browser appears.
