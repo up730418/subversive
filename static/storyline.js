@@ -13,12 +13,12 @@ window.addEventListener('load', () => {
     serverCommand("servoClock");
     serverCommand("elevator");
   });
-  if(fakeNewsbtn){
+  if(document.getElementById("fakeNewsbtn")){
    fakeNewsbtn.addEventListener('click', ()=> {
 	 serverCommand("screen");
    });
   }
-  if(fakeNewsClose){
+  if(document.getElementById("fakeNewsClose")){
    fakeNewsClose.addEventListener('click',()=> {
 	  serverCommand("screen");
    });
