@@ -26,6 +26,6 @@ Once in the file scroll to the bottom and on a new line insert the following lin
 
 `@xset s noblank`
 
-`@chromium-browser --kiosk http://192.168.5.1:8080/screen.html `
+`@chromium-browser --kiosk --incognito http://192.168.5.1:8080/screen.html `
 
 The pi show the advert when it boots. Note that sometimes it takes a while before the browser appears.
