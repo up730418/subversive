@@ -11,3 +11,12 @@ If you want to turn the PiFi on copy the instructions in piFiles/README.md
 You will also need to run `sudo apt-get install libasound2-dev` for speaker library to work
 
 When you are ready run `sh start.sh` then navigate to the server
+
+## LCD Screen
+
+For LCD screen the library found at https://github.com/goodtft/LCD-show/ has been used. 
+To enable the screen clone this repo and follow the instructions in the README.md file.
+
+To launch the browser on startup edit the .bashrc file by running `sudo nano .bashrc`.
+Once in the file scroll to the bottom and on a new line insert the following code `chromium-browser --kiosk 192.168.5.1:8080/screen.html`
+The pi show the advert when it boots. Note that sometimes it takes a while before the browser appears.
