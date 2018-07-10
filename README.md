@@ -12,7 +12,7 @@ You will also need to run `sudo apt-get install libasound2-dev` for speaker libr
 
 When you are ready run `sh start.sh` then navigate to the server
 
-If you wish for the server to autorun when the pi is started we need to modify the rc.local file. In order to do this use `sudo /etc/rc.local` and the following line `sh ./home/pi/subversive/start.sh` below any other code but before `exit 0`
+If you wish for the server to autorun when the pi is started we need to modify the rc.local file. In order to do this use `sudo nano /etc/rc.local` and the following line `sh ./home/pi/subversive/start.sh` below any other code but before `exit 0`
 
 ## LCD Screen
 
