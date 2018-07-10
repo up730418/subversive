@@ -18,7 +18,7 @@ let options = {
 
 app.get('/servoClock', async (req, res) => {
 
-  PythonShell.run('scripts/servo2.py', function (err, results) {
+  PythonShell.run('./scripts/servo2.py', function (err, results) {
 	  if (err) {
 	   console.log(err);
 	  }
@@ -30,7 +30,7 @@ app.get('/servoClock', async (req, res) => {
 
 app.get('/servoAntiClock', async (req, res) => {
 
-  PythonShell.run('scripts/servo.py', function (err, results) {
+  PythonShell.run('./scripts/servo.py', function (err, results) {
 	  if (err) {
 	   console.log(err);
 	  }
@@ -42,7 +42,7 @@ app.get('/servoAntiClock', async (req, res) => {
 
 app.get('/alarm', async (req, res) => {
   //sudo apt-get install libasound2-dev (for speaker library to work)
-	fs.createReadStream('sounds/alarm.mp3')
+	fs.createReadStream('./sounds/alarm.mp3')
 	  .pipe(new lame.Decoder())
 	  .on('format', function (format) {
 		      this.pipe(new Speaker(format));
@@ -66,7 +66,7 @@ app.get('/screen', async (req, res) => {
   res.sendStatus(200);
 });
 
-app.use(express.static('static'));
+app.use(express.static('./static'));
 
 app.listen(port, (err) => {
   if (err) {

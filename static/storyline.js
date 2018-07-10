@@ -13,6 +13,13 @@ window.addEventListener('load', () => {
     serverCommand("servoClock");
     serverCommand("elevator");
   });
+
+  fakeNewsbtn.addEventListener('click', ()=> {
+	 serverCommand("screen");
+  });
+  fakeNewsClose.addEventListener('click',()=> {
+	  serverCommand("screen");
+  });
 //  servoAnti.addEventListener('click', ()=> {
 //    serverCommand("servoAntiClock");
 //  })
@@ -20,3 +27,4 @@ window.addEventListener('load', () => {
     liveCamera.src = 'http://' + window.location.hostname + ':8300/image.jpg';
   }
 });
+
