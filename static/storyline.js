@@ -13,13 +13,16 @@ window.addEventListener('load', () => {
     serverCommand("servoClock");
     serverCommand("elevator");
   });
-
-  fakeNewsbtn.addEventListener('click', ()=> {
+  if(fakeNewsbtn){
+   fakeNewsbtn.addEventListener('click', ()=> {
 	 serverCommand("screen");
-  });
-  fakeNewsClose.addEventListener('click',()=> {
+   });
+  }
+  if(fakeNewsClose){
+   fakeNewsClose.addEventListener('click',()=> {
 	  serverCommand("screen");
-  });
+   });
+  }  
 //  servoAnti.addEventListener('click', ()=> {
 //    serverCommand("servoAntiClock");
 //  })
